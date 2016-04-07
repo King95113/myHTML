@@ -1,0 +1,14 @@
+.left{
+    float: left;
+    width:100px;
+    height: 200px;
+    background-color: blue;
+    border: 1px solid black;
+}
+.other{
+    float: left;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border: 1px solid black;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>广告弹出</title>
+    <script type="text/javascript">
+        window.onload = function(){
+            var flag = 0;
+            document.onclick = function(){
+                if(flag ==0){
+                    window.open("http://www.baidu.com","","width = 300, height =300");
+                    flag = 1;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>点哪儿都会弹出广告窗口</p>
+
+</body>
+</html>

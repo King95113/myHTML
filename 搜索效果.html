@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+    <style type="text/css">
+
+    </style>
+
+
+    <script type="text/javascript">
+        var e = document.getElementById("search");
+        var txt = e.value;
+        e.onfocus = function(){
+            if(e.value ==txt){
+                e.value ="";
+            }
+        }
+        e.onblur = function () {
+            if(e.value ==""){
+                e.value = txt;
+            }
+        }
+
+        function jump(){
+            var e  =window.event;
+            var obj = e.srcElement;
+            var link = obj.options[obj.selectedIndex].value;
+            window.open(link,"","");
+        }
+
+    </script>
+</head>
+<body>
+    <input id="search" type="text" placeholder="百度一下，你就知道"/><input id="btn1" type="button" value="搜索"/>
+
+
+    <select id="list" onchange="jump()">
+        <option value="http://www.baidu.com">百度</option>
+        <option value="http://www.sina.com">新浪</option>
+        <option value="http://www.qq.com">腾讯</option>
+        <option value="http://www.sohu.com">搜狐</option>
+    </select>
+
+
+
+</body>
+</html>

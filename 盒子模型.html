@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box model</title>
+    <style type="text/css">
+        #main{display: inline-block;/*将块元素转化为inline-block元素*/
+            border:1px solid red;
+
+            }
+        .king{
+            display: inline-block;
+            padding:20px;
+            margin: 40px;
+            border:1px dashed black;
+            background-color: green;
+        }
+
+        span{
+            border:1px solid blue; background-color: aqua ;}
+
+        #father{
+            padding: 10px;
+            width: 400px;
+            border:1px dashed red;
+            background-color: chartreuse;}
+        #father div{padding: 10px;
+                    margin: 15px;
+            border:2px dashed green;
+        }
+        #father p{
+            margin: 15px;
+            border:2px dashed red;
+            background-color: chartreuse;
+        }
+        #son1{
+            float: left;}
+        #son2{
+            float: left;}
+        #son3{
+            float: left;}
+        div p strong{color: red}
+        .first #name strong{color: aqua}
+    </style>
+</head>
+<body>
+    <div id = "main">
+        <div class = "king">
+            <span>KING</span>
+        </div>
+    </div>
+    <hr/>
+
+    <div id ="father">
+        <div id = "son1">son1</div>
+        <div id = "son2">son2</div>
+        <div id = "son3">son3</div>
+        <p>这里是浮动框外围的文字，这里是浮动框外围的文字，这里是浮动框外围的文字，这里是浮动框外围的文字，这里是浮动框外围的文字，这里是浮动框外围的文字，</p>
+    </div>
+    <hr/>
+
+<div class = "first">
+    <p id="name"><strong>KING</strong></p>
+</div>
+</body>
+</html>

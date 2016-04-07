@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        var flag = 0;
+        window.onload = function(){
+            setInterval("titleChange()",1000);
+        }
+            function titleChange(){
+                if(flag == 0){
+                    document.title = "★☆★king★☆★";
+                    flag = 1;
+                }else{
+                    document.title = "☆★☆king☆★☆";
+                    flag = 0;
+                }
+            }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

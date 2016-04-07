@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input id="txt" type="text"/>
+    <div>字符串长度：<span id="num">0</span></div>
+    <script type="text/javascript">
+        var e = document.getElementById("txt");
+        var n = document.getElementById("num");
+        e.onkeyup = function(){
+            var str = e.value.toString();
+            n.innerHTML = str.length;
+        }
+
+
+    </script>
+</body>
+</html>

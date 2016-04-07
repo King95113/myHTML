@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入节点</title>
+
+    <script type="text/javascript">
+        function insert(){
+            var e = document.createElement("li");
+            var str = document.getElementById("txt").value;
+            var txt = document.createTextNode(str);
+            e.appendChild(txt);
+            var list = document.getElementById("list");
+            list.appendChild(e);
+
+        }
+        function del(){
+            var e = document.getElementById("list");
+            if(e.hasChildNodes()){
+                e.removeChild(e.lastChild);
+            }
+        }
+        function copy(){
+            var e = document.getElementById("list");
+            document.body.appendChild(e.cloneNode(1));
+        }
+
+        function replace(){
+           var txt = document.getElementById("rp_txt").value;
+            var t = document.getElementById("head");
+
+            var tx = document.createTextNode(txt);
+
+            document.body.replaceChild(tx,t);
+
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <h1 id="head">hello world</h1>
+    <ul id="list">
+        <li>king</li>
+        <li>may</li>
+        <li>meng</li>
+        <li>ji</li>
+    </ul>
+插入文本：<input type="text" id="txt" /><br/>
+        <input type="button" value="插入新项" onclick="insert()"/><br/>
+
+        <input type="button" value="删除最后一项" onclick="del()"/><br/>
+        <input type="button" value="复制" onclick="copy()">
+        <hr/>
+        <input type="text" id="rp_txt"><br/>
+        <input type="button" value="替换标题" onclick="replace()"/>
+
+
+</body>
+</html>

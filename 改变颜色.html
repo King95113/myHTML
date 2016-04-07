@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function fresh(){
+            if(window.event.keyCode == 82){//按R刷新页面
+                location.reload();
+            }
+
+            document.onkeypress = fresh();
+
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">king</h1>
+    <hr/>
+    <input id="btn" type="button" value="change color"/>
+    <script type="text/javascript">
+        var t = document.getElementById("title");
+        var b = document.getElementById("btn");
+        b.onmousedown = function(){
+            t.style.color = "red";
+        }
+        b.onmouseout = function () {
+            t.style.color = "black";
+        }
+
+        //刷新页面
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        var n =3;
+        var m =0;
+
+        function openWindow(){
+            var bai = window.open("http://www.baidu.com","","top=200,left=200")
+        }
+        function resizeIt(){
+            window.resizeTo(200,200);
+        }
+        function moveWindow(){
+            window.moveTo(0,0);
+        }
+
+
+                setTimeout("alert('welcome king')",3000);
+        window.onload = function count(){
+            var t = setInterval(countDown(),1000);
+        }
+        function countDown(){
+                if(n>0){
+                    n--;
+                   // document.getElementById("num").innerHTML = n;
+                }
+
+        window.onload = function(){
+            var t = setInterval("add()",1000);
+            document.getElementById("btn_pause").onclick = function(){
+                clearInterval(t);
+            }
+            document.getElementById("btn_continue").onclick = function(){
+                if(confirm("继续？？")){
+                    t = setInterval("add()",1000);
+                }
+            }
+
+        }
+            function add(){
+                m++;
+                document.getElementById("time").innerHTML = m;
+            }
+
+            function onMes(){
+                if(confirm("返回百度")){
+                    window.location.href = ("http://www.baidu.com");
+                }else{
+                    document.write("你去消可跳转");
+                }
+
+            }
+
+
+        }
+
+
+
+
+    </script>
+    <style type="text/css">
+        #B{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="open baidu" onclick="openWindow()">
+    <input type="button" value="close it" onclick="this.close()">
+    <input type="button" value="change size" onclick="resizeIt()">
+    <input type="button" value="move window" onclick="moveWindow()">
+    <input type="button" value="返回主页" onclick="onMes()">
+    <p>倒计时：<h3 id="num">3</h3></p>
+
+    <div id="B">
+        <h3>跑秒区：<span id="time">0</span></span></h3>
+        <input type="button" id="btn_pause" value="暂停">
+        <input type="button" id="btn_continue" value="继续">
+
+
+    </div>
+
+</body>
+</html>

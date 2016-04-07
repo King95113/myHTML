@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KING加密</title>
+    <style type="text/css">
+        #text-input,#text-output{
+            height: 60px;
+        }
+    </style>
+    <script type="text/javascript">
+        function encrpt(){
+            var str = document.getElementById("text-input").value;
+            document.getElementById("text-output").value = escape(str);
+        }
+        function decrypt(){
+            var str = document.getElementById("text-input").value;
+            document.getElementById("text-output").value = unescape(str);
+        }
+    </script>
+</head>
+<body>
+    <form>
+    <textarea id = "text-input" cols="20"></textarea><br/>
+    <input type="button" value="加密" onclick="encrpt()"/>
+    <input type="button" value="解密" onclick="decrypt()"/>
+    <input type="reset" value="清除"/><br/>
+    <textarea id = "text-output" cols="20"></textarea>
+        </form>
+</body>
+</html>

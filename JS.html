@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+    <script type="text/javascript">
+        document.write("KING");
+        function altertmessage(){
+            alert('king');
+        }
+        function enterMes(){
+            alert('welcome back to home');
+        }
+        function inc(a,b){
+            return a-b;
+        }
+        function dec(a,b){
+            return b-a;
+        }
+        window.onload = enterMes();
+        var str= "KING";
+        str.blink();
+        document.write(str + "<br/>");
+        var d = new Date();
+        var my_y = d.getFullYear();
+        var my_m = d.getMonth() + 1;
+        var my_d = d.getDate();
+        document.write("今天是" + my_y + "年" + my_m + "月" + my_d + "日 <br/>");
+        var str = d.toLocaleDateString();
+        document.write(d);
+        var date = new Date();
+        date.setFullYear(1995,1,13);
+        document.write("<br/> my birthday is " + date );
+        /**
+         * 设施星期几
+         */
+        var weekday = new Array(7);
+        weekday[0] = "星期日";
+        weekday[1] = "星期一";
+        weekday[2] = "星期二";
+        weekday[3] = "星期三";
+        weekday[4] = "星期四";
+        weekday[5] = "星期五";
+        weekday[6] = "星期六";
+        var day = new Date();
+        document.write("<br/>今天是:" + weekday[day.getUTCDay()] );
+        /**
+         * 排序
+         */
+        var num = new Array(4,5,1,16,54,98,12);
+        num.sort(inc);
+        document.write("<br/> increase" +  num.join("*"));
+        document.write("<br/>decrease" + (num.sort(dec)).join("*"));
+    </script>
+</head>
+<body>
+    <br/>
+    <input type="button" onclick="alert('KING')" value="button"/>
+    <input type="button" onclick="altertmessage()" value="use function">
+
+</body>
+</html>
