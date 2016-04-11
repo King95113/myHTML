@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="JSform.js">
+
+    </script>
+</head>
+<body>
+    <form>
+        <label id="formNameLabel">*Name:</label>
+        <input id="formNameBox" type="text" name="name" placeholder="enter your name" style="border-color: aliceblue"/>
+        <br/>
+        <label id="formNumberLabel">Number:</label>
+        <input id="formNumberBox" type="text" name="number" placeholder="enter your number"style="border-color: aliceblue"/>
+        <br/>
+        <label id="formCountryLabel">Country:</label>
+        <select id="list">
+            <option>Canada</option>
+            <option>Dublin</option>
+            <option>US</option>
+            <option>UK</option>
+        </select>
+        <br/>
+        I dont want to give a number<input type="radio" id="radioBtnDot" name="giveNumber" value="no" onclick="makeGrey()"/>
+        Actually, I want to give a number<input type="radio"  name="giveNumber" value="yes" onclick="makeGreyOut()"/>
+    </form>
+</body>
+</html>

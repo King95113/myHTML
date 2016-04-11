@@ -1,0 +1,9 @@
+.joke{
+    font-style: italic;
+    border: 1px dashed red;
+
+
+}
+.joke:hover{
+    background-color: darkgrey;
+}
