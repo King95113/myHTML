@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结构伪类选择器</title>
+    <style type="text/css">
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        :root{
+            background-color: silver;
+        }
+
+        ul{
+            display: inline-block;
+            width: 200px;
+            list-style-type: none;
+        }
+        ul li{
+            height: 20px;
+        }
+        ul li:first-child{
+            background-color: red;
+        }
+        ul li:nth-child(2){
+            background-color: orange;
+        }
+        ul li:nth-child(3){
+            background-color: aquamarine;
+        }
+        ul li:nth-child(4){
+            background-color: #3EFF3E;
+        }
+        ul li:last-child{
+            background-color: #ff00de;
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
